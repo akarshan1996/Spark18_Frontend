@@ -30,29 +30,28 @@ const RightDivision = () => {
                             <Typography variant="h6" className={classes.title}>
                                 {heading}
                             </Typography>
-                            {subHeadings.map((item, index) => {
-                                return (
-                                    <div className={classes.demo} key={index} >
-                                        <List dense component="div" role="list">
-                                            {item.checked === true ?
-                                                <ListItem role="listitem" button>
-                                                    <Chip
-                                                        size="large"
-                                                        label={item.text}
-                                                        onDelete={() => dispatch({ type: 'TOGGLE_CHECKBOX', payload: { id: item.id } })}
-                                                    />
-                                                </ListItem> : null
-                                            }
-                                        </List>
-                                    </div>
-                                )
-                            })}
+                            {subHeadings.map((item, index) => (
+                                <List dense role="list" key={index} className={(item.checked === true) ? '' : `${classes.listItemEmpty}`} >
+                                    { item.checked === true ?
+                                        (
+                                            <ListItem role="listitem" button className={classes.ListItem} >
+                                                <Chip
+                                                    className={classes.listItemText}
+                                                    size="medium"
+                                                    label={item.text}
+                                                    onDelete={() => dispatch({ type: 'TOGGLE_CHECKBOX', payload: { id: item.id } })}
+                                                />
+                                            </ListItem>
+                                        ) : null
+                                    }
+                                </List>
+                            ))}
                         </React.Fragment>
                     )
                 }
             }) :
                 <div className={classes.text}>
-                    <Typography variant="h4">
+                    <Typography variant="h5">
                         {'No Value selected'}
                     </Typography>
                 </div>

@@ -6,16 +6,18 @@ export const globalState = React.createContext({
         {
             heading: 'Portugal',
             subHeadings: [
-                { id: uuidv4(), text: 'abc', checked: false },
-                { id: uuidv4(), text: 'def', checked: false },
+                { id: uuidv4(), text: 'Software engineer', checked: false },
+                { id: uuidv4(), text: 'Software engineer', checked: false },
+                { id: uuidv4(), text: 'Software engineer', checked: false },
+                { id: uuidv4(), text: 'Software engineer', checked: false },
             ],
         },
         {
             heading: 'America',
             subHeadings: [
-                { id: uuidv4(), text: 'akarshan', checked: false },
-                { id: uuidv4(), text: 'random', checked: false },
-                { id: uuidv4(), text: 'lorem', checked: false }
+                { id: uuidv4(), text: 'Software engineer', checked: false },
+                { id: uuidv4(), text: 'Software engineer', checked: false },
+                { id: uuidv4(), text: 'Software engineer', checked: false },
             ],
         },
         {
@@ -23,7 +25,6 @@ export const globalState = React.createContext({
             subHeadings: [
                 { id: uuidv4(), text: 'Software engineer', checked: false },
                 { id: uuidv4(), text: 'Techincal Architect', checked: false },
-                { id: uuidv4(), text: 'Technical Lead', checked: false }
             ],
         }
     ]

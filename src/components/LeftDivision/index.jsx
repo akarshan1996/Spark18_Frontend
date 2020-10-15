@@ -25,7 +25,7 @@ const LeftDivision = () => {
                         {subHeadings.map((item, index) => {
                             return (
                                 <List dense component="div" role="list" key={index}>
-                                    <ListItem role="listitem" button>
+                                    <ListItem role="listitem" button className={classes.listItem}>
                                         <ListItemIcon>
                                             <Checkbox
                                                 checked={item.checked}
@@ -36,6 +36,7 @@ const LeftDivision = () => {
                                             />
                                         </ListItemIcon>
                                         <ListItemText
+                                            className={classes.listItemText}
                                             id={item.text}
                                             primary={item.text}
                                         />

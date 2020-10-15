@@ -19,10 +19,10 @@ function App() {
       <GlobalState.Provider value={{ state, dispatch }} >
         <Grid item xs={12} className={classes.parentDiv}>
           <Grid container justify="center" alignItems="center">
-            <Grid item xs={5}>
+            <Grid item xs={4}>
               <LeftDivision />
             </Grid>
-            <Grid item xs={5}>
+            <Grid item xs={4}>
               <RightDivision />
             </Grid>
           </Grid>
